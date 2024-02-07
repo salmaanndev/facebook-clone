@@ -1,0 +1,54 @@
+.post {
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+.postLikes {
+    display: flex;
+    flex-direction: column;
+}
+.postUpper {
+    display: flex;
+    padding: 20px;
+}
+.autherName{
+    margin-left: 10px;
+}
+.postContent{
+    margin-left: 20px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.likes{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin: 0px 10px;
+}
+.likesCount{
+    display: flex;
+    align-items: center;
+}
+.likesCount > p {
+    margin-left: 5px;
+}
+.commentShare {
+    display: flex;
+}
+.likeBtn {
+    display: flex;
+    justify-content: space-evenly;
+}
+.postBtn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+.postBtn:hover{
+    background-color: whitesmoke;
+}

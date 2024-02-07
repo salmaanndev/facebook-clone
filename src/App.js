@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './pages/login/Login';
+import Feed from './pages/feed/Feed';
+import { useReducer, useState } from 'react';
+import PostForm from './components/postForm/PostForm';
+
+const initialState = {
+  status: 'loading',
+  posts: [],
+  seeMore: false,
+  title: "See More",
+}
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "more":
+      return { ...state, seeMore: !false, status: 'moreitems', title: 'See Less' }
+    case "less":
+      return { ...state, seeMore: false, status: 'lessitems', title: 'See More' }
+    case 'addPost':
+      return { ...state, posts: [...state.posts, { id: Date.now(), newPost: action.newPost }] };
+    default:
+      throw new Error("Action is Unknown")
+  }
+}
 
 function App() {
+
+  const [newPost, setNewPost] = useState('');
+
+  function handlePost() {
+    if (newPost.trim() !== '') {
+      dispatch({ type: 'addPost', newPost });
+      setNewPost('');
+    }
+  }
+
+  const [{ status, seeMore, title, posts }, dispatch] = useReducer(reducer, initialState)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={status === 'loading' && <Login />} />
+        <Route path="/feed" element={
+          <Feed title={title} seeMore={seeMore} dispatch={dispatch} status={status}>
+            <PostForm handlePost={handlePost} newPost={newPost} setNewPost={setNewPost} posts={posts} dispatch={dispatch} />
+          </Feed>
+        }
+
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

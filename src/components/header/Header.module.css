@@ -1,0 +1,95 @@
+.headerMain {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+.headerLeft {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.headerLeft>img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.headerInput {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+
+.headerInput>input {
+    background-color: whitesmoke;
+    padding: 0px 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.headerCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.headerRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.headerRight > p {
+    background-color: whitesmoke;
+    padding: 10px 12px;
+    border-radius: 20px;
+}
+.headerRight > p:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+.headerRight > button {
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    color: black;
+    margin-left: 10px;
+}
+.headerRight > button:hover {
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    .headerCenter {
+        display: none;
+
+    }
+    .headerLeft>img {
+        width: 40px;
+        margin-right: 10px;
+    }
+    .headerInput>input {
+        width: 0px;
+    }
+    .headerInput>input::placeholder {
+        color: whitesmoke;
+    }
+    .headerRight >p {
+        display: none;
+    }
+    .headerLeft {
+        display: flex;  
+    }
+    .headerRight {
+        margin-right: 20px;
+    }
+}

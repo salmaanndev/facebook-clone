@@ -1,0 +1,47 @@
+.postForm{
+    background-color: white;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.postFormUpper{
+    display: flex;
+    align-items: center;
+}
+.postFormUpper > input {
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 0px 6px;
+}
+.postFormUpper > input:hover {
+    background-color: rgba(211, 211, 211, 0.522);
+    cursor: pointer;
+}
+
+.postFormLower{
+    margin-top: 20px;
+}
+.formBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.postFormBtn {
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.postFormBtn > p{
+    margin-left: 10px;
+}
+.postFormBtn:hover {
+   background-color: whitesmoke;
+}

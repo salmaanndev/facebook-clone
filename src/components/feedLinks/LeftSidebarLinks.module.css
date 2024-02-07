@@ -1,0 +1,14 @@
+.LeftSidebarLinks{
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+}
+.LeftSidebarLinks:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+.LeftSidebarLinks > p {
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+}

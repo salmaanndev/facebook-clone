@@ -1,0 +1,12 @@
+.contactList {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+}
+.contactList:hover {
+    background-color: rgba(128, 128, 128, 0.448);
+    cursor: pointer;
+}
+.contactList > p{
+    margin-left: 10px;
+}

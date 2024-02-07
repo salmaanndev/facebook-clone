@@ -1,0 +1,165 @@
+.login {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 145px 150px;
+}
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    flex: 0.55;
+}
+
+.leftContent>img {
+    width: 22em;
+}
+
+.leftContent>p {
+    margin-left: 30px;
+    font-size: 30px;
+}
+.rightContent{
+    display: flex;
+    flex-direction: column;
+    flex: 0.35;
+    margin-right: 20px;
+}
+
+.rightContent>form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 85%;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px 20px;
+
+}
+
+.rightContent>form>input {
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px 0px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+    width: 90%;
+}
+
+.rightContent>form>input:focus {
+    outline: 2px solid skyblue;
+}
+
+.rightContent>form>input::placeholder {
+    color: gray;
+}
+
+.loginBtn {
+    background-color: #1877f2;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 15px 0px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.loginBtn:hover {
+    cursor: pointer;
+}
+
+.createBtn {
+    background-color: #42b72a;
+    font-size: 19px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 18px 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.createBtn:hover {
+    background-color: #2f841e;
+    cursor: pointer;
+}
+
+.rightContent>p {
+    margin-top: 20px;
+    text-align: center;
+}
+.rightContent>p>strong:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.rightContent>form>p {
+    margin-top: 20px;
+    color: rgb(0, 139, 238);
+}
+
+.rightContent>form>p:hover {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+    .login {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0px 0px;
+        align-items: center;
+    }
+    .rightContent>form {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        border-radius: 10px;
+        align-items: center;
+        padding: 0px 0px;
+        margin-top: 20px;
+        height: 350px;
+    
+    }
+    .rightContent>form>input {
+        padding: 20px;
+        font-size: 20px;
+        margin: 10px 0px;
+        border-radius: 7px;
+        border: 1px solid lightgray;
+        width: 80%;
+    }
+    .loginBtn {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 15px 0px;
+        width: 90%;
+        text-align: center;
+    }
+    .leftContent>p {
+        width: 90%;
+    }
+    .createBtn {
+    background-color: #42b72a;
+    font-size: 19px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 18px 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.rightContent>form>p >strong {
+    padding-bottom: 20px;
+}
+}

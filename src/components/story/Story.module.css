@@ -1,0 +1,27 @@
+.backimg {
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px 6px;
+    align-items: center;
+}
+.createBtn{
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 10px;
+}
+.storytxt{
+    margin-left: 10px;
+}
+.backimg > p {
+    color: white;
+}
+.backimg:hover {
+   background-color: whitesmoke;
+   cursor: pointer;
+}
